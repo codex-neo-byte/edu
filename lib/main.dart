@@ -1,4 +1,6 @@
+import 'package:edu/app_shell.dart';
 import 'package:edu/presentation/auth/register_screen.dart';
+import 'package:edu/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:edu/presentation/auth/login_screen.dart';
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/login': (_) => const LoginScreen(),
         '/register': (_) => const RegisterScreen(),
-        '/homeParent': (_) => const HomeParentScreen(),
+        '/homeParent': (_) => const AppShell(),
         '/homeProf': (_) => const HomeProfScreen(),
       },
     );
@@ -53,3 +55,5 @@ class HomeProfScreen extends StatelessWidget {
     return const Scaffold(body: Center(child: Text("Accueil Professeur")));
   }
 }
+
+
